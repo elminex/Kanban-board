@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Kanban board</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+</head>
+<body>
+    <header class="header">
+        <h1>Classes, prototypes and boards</h1>
+        <button class="create-board">Add new board</button>
+    </header>
+<div class ="board-wrapper">
+    
+</div>
+    <script id="board-template" type="x-tmpl-mustache">
+            <div class="board">
+                    <h2 class="board-title">{{name}}</h2>
+                    <button class="create-column">Add a column</button>
+                    <div class="column-container"></div>
+                </div>
+    </script>
+    <script id="column-template" type="x-tmpl-mustache">
+            <div class="column">
+                <h3 class="column-title">{{ name }}</h3>
+                <ul id={{ id }} class="column-card-list"></ul>
+                <button class="btn-delete">X</button>
+                <button class="add-card">Add a card</button>
+            </div>
+    </script>
+    <script id="card-template" type="x-tmpl-mustache">
+            <div class="card">
+              <p class="card-description">{{ description }}</p>
+              <button class="btn-delete">x</button>
+            </div
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.min.js"></script>
+    <script src='js/script.js'></script>
+</body>
+
+</html>
