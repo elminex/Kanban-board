@@ -45,9 +45,10 @@ body {
 .board {
     font-family: 'Indie Flower', cursive;
     width: 45%;
+    min-width: 500px;
     text-align: center;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 0 30px 20px;
     min-height: 200px;
     background: url(/15.6/images/wood-board-background_1339-5418.jpg) repeat-y;
     box-shadow: 2px 2px 5px black;
@@ -58,7 +59,7 @@ body {
         margin: 0 auto;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
     &-title {
         color: white;
