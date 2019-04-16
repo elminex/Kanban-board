@@ -6,7 +6,7 @@ body { background-color: #fdffdd; }
 
 .header h1 { font-size: 2.5rem; text-shadow: 2px 2px 4px lightgrey; }
 
-.board { font-family: 'Indie Flower', cursive; width: 45%; min-width: 500px; text-align: center; padding: 10px; margin-bottom: 20px; min-height: 200px; background: url(/15.6/images/wood-board-background_1339-5418.jpg) repeat-y; box-shadow: 2px 2px 5px black; position: relative; }
+.board { font-family: 'Indie Flower', cursive; width: 45%; min-width: 500px; text-align: center; padding: 10px; margin: 0 auto 20px; min-height: 200px; background: url(/15.6/images/wood-board-background_1339-5418.jpg) repeat-y; box-shadow: 2px 2px 5px black; position: relative; }
 
 .board-wrapper { width: 100%; max-width: 1200px; margin: 0 auto; overflow-y: auto; }
 
