@@ -7,6 +7,7 @@
     <title>Kanban board</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='css/style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato:400,700" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -33,6 +34,7 @@
     </script>
     <script id="card-template" type="x-tmpl-mustache">
             <div class="card">
+              <img src="/images/pin.png" class="card-pin">
               <p class="card-description">{{ description }}</p>
               <button class="btn-delete">x</button>
             </div

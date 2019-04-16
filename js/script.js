@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     this.removeColumn();
                 }
                 if (e.target.classList.contains('add-card')) {
-                    this.addCard(new Card(prompt('Enter the name of the card')));
+                    this.addCard(new Card((prompt('Enter the name of the card') || 'New Card')));
                 }
             });
         }
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.element = generateTemplate('board-template', { name: this.name, id: this.id });
             this.columnWrapper = this.element.querySelector('.column-container');
             this.element.querySelector('.create-column').addEventListener('click', () => {
-                let name = prompt('Enter a column name');
+                let name = (prompt('Enter a column name') || 'New column');
                 let column = new Column(name);
                 this.addColumn(column);
             });
@@ -77,38 +77,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const el = document.getElementById(id);
         let sortable = Sortable.create(el, {
             group: 'kanban',
-            sort: true
+            sort: true,
         });
+        
     }
 
     document.querySelector('.create-board').addEventListener('click', () => {
-        let name = prompt('enter board name');
+        let name = (prompt('Enter board name') || 'New board');
         let board = new Board(name);
         document.querySelector('.board-wrapper').appendChild(board.element);
         unwrap(board.element);
     });
 
-    //CREATE FIRST BOARD
-
-    let board1 = new Board('board1');
+    let board1 = new Board('Nowa tablica');
     document.querySelector('.board-wrapper').appendChild(board1.element);
     unwrap(board1.element);
-    // CREATING COLUMNS
+
 
     let todoColumn = new Column('To do');
     let doingColumn = new Column('Doing');
     let doneColumn = new Column('Done');
 
-    // ADDING COLUMNS TO THE BOARD
     board1.addColumn(todoColumn);
     board1.addColumn(doingColumn);
     board1.addColumn(doneColumn);
 
-    // CREATING CARDS
     const card1 = new Card('New task');
     const card2 = new Card('Create kanban boards');
 
-    // ADDING CARDS TO COLUMNS
     todoColumn.addCard(card1);
     doingColumn.addCard(card2);
 
