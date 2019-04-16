@@ -34,10 +34,10 @@ body {
 
 .header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-family: 'Indie Flower', cursive;
     & h1 {
-        font-size: 4rem;
+        font-size: 2.5rem;
         text-shadow: 2px 2px 4px lightgrey;
     }
 }
@@ -48,7 +48,7 @@ body {
     min-width: 500px;
     text-align: center;
     padding: 10px;
-    margin: 0 30px 20px;
+    margin-bottom: 20px;
     min-height: 200px;
     background: url(/15.6/images/wood-board-background_1339-5418.jpg) repeat-y;
     box-shadow: 2px 2px 5px black;
@@ -57,9 +57,7 @@ body {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+        overflow-y: auto;
     }
     &-title {
         color: white;
@@ -170,5 +168,22 @@ body {
     }
     100% {
         transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (min-width: 768px) {
+    .board {
+        margin: 0 30px 20px;
+        &-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+    }
+    .header {
+        margin-bottom: 40px;
+        h1 {
+            font-size: 4rem;
+        }
     }
 }

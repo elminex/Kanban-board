@@ -2,13 +2,13 @@
 
 body { background-color: #fdffdd; }
 
-.header { text-align: center; margin-bottom: 40px; font-family: 'Indie Flower', cursive; }
+.header { text-align: center; margin-bottom: 20px; font-family: 'Indie Flower', cursive; }
 
-.header h1 { font-size: 4rem; text-shadow: 2px 2px 4px lightgrey; }
+.header h1 { font-size: 2.5rem; text-shadow: 2px 2px 4px lightgrey; }
 
-.board { font-family: 'Indie Flower', cursive; width: 45%; min-width: 500px; text-align: center; padding: 10px; margin: 0 30px 20px; min-height: 200px; background: url(/15.6/images/wood-board-background_1339-5418.jpg) repeat-y; box-shadow: 2px 2px 5px black; position: relative; }
+.board { font-family: 'Indie Flower', cursive; width: 45%; min-width: 500px; text-align: center; padding: 10px; margin-bottom: 20px; min-height: 200px; background: url(/15.6/images/wood-board-background_1339-5418.jpg) repeat-y; box-shadow: 2px 2px 5px black; position: relative; }
 
-.board-wrapper { width: 100%; max-width: 1200px; margin: 0 auto; display: -ms-flexbox; display: flex; -ms-flex-flow: row wrap; flex-flow: row wrap; -ms-flex-pack: center; justify-content: center; }
+.board-wrapper { width: 100%; max-width: 1200px; margin: 0 auto; overflow-y: auto; }
 
 .board-title { color: white; text-shadow: 3px 2px 5px black; font-size: 32px; margin: 15px; }
 
@@ -57,3 +57,8 @@ body { background-color: #fdffdd; }
   50% { transform: translate3d(2px, -2px, 10px); }
   75% { transform: translate3d(1px, -1px, 5px); }
   100% { transform: translate3d(0, 0, 0); } }
+
+@media (min-width: 768px) { .board { margin: 0 30px 20px; }
+  .board-wrapper { display: -ms-flexbox; display: flex; -ms-flex-flow: row wrap; flex-flow: row wrap; -ms-flex-pack: center; justify-content: center; }
+  .header { margin-bottom: 40px; }
+  .header h1 { font-size: 4rem; } }
