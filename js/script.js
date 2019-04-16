@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         unwrap(board.element);
     });
 
-    let board1 = new Board('Nowa tablica');
+    let board1 = new Board('New board');
     document.querySelector('.board-wrapper').appendChild(board1.element);
     unwrap(board1.element);
 
